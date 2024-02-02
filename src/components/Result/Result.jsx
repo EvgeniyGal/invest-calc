@@ -1,6 +1,12 @@
 import ResultRow from "./ResultRow";
 
-export default function Result({ data, initialInvestment }) {
+export default function Result({ data }) {
+  let initialInvestment = 0;
+  if (data.length > 0) {
+    initialInvestment =
+      data[0].valueEndOfYear - data[0].interest - data[0].annualInvestment;
+  }
+
   return (
     <table id="result">
       <thead>

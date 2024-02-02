@@ -32,10 +32,7 @@ function App() {
       <section id="user-input">
         <InputGroup onChange={handleInputData} currData={inputData} />
       </section>
-      <Result
-        data={calculateInvestmentResults(inputData)}
-        initialInvestment={inputData.initialInvestment}
-      />
+      <Result data={calculateInvestmentResults(inputData)} />
     </>
   );
 }
